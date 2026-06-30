@@ -1,19 +1,25 @@
 class MoldeBola:
-    def __init__(self,cor, circunferencia, material):  #atributos
+    def __init__(self, cor, circunferencia, material):  
         self.cor = cor
         self.circunferencia = circunferencia
         self.material = material
 
-    def trocar_cor(self, cor):  #metodo de instancia?
-        MoldeBola.cor = str(input("Insira a nova cor: "))
+    def trocar_cor(self):  
+        self.cor = str(input("Insira a nova cor: "))
+        print(f"Nova cor: {self.cor}")
+    def mostrar_cor(self):         
+        print(f"A cor é: {self.cor}")
 
-    def mostrar_cor(self, cor):         #metodo de instancia?
-        print(f"A cor é: {self.mostrar_cor}")
-MoldeBola.cor = str(input("Insira a cor: "))
-MoldeBola.circunferencia = int(input("Insira a circunferencia: "))
-MoldeBola.material = str(input("Insira o mat: "))
+bola1 = MoldeBola("Azul", 2.0, "Metal")
 
-print(f"Bola da cor {MoldeBola.cor} da circunferencia {MoldeBola.circunferencia} e material {MoldeBola.material}")
+print(f"Bola da cor {bola1.cor} da circunferencia {bola1.circunferencia} e material {bola1.material}")
+
 trocar = str(input("trocar de cor?"))
+
 if trocar == "S".lower():
-    MoldeBola.trocar_cor(self, cor)
+    bola1.trocar_cor()
+    print(f"Bola atualizado!")
+    print(f"Bola NOVA: {bola1.cor} circunferencia: {bola1.circunferencia} material {bola1.material}")
+else:
+    print("Blz cara, n vm mudar nada")
+
