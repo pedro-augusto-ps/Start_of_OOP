@@ -23,16 +23,16 @@ while True:
 
     else:                                     #SE ambos estão vivos, ENTÃO continue o combate
         guerreiro1.atacar(mago1)              #Guerreiro ataca mago1
-        if mago1.vida <= 0:                   #TESTE para vida do mago1 não ficar negativa
-            mago1.vida = 0
-            continue                  #TESTE para vida do mago1 não ficar negativa                       
+        if mago1.vida <= 0:                   #TESTE para vida do mago1 não aparecer negativa
+            mago1.vida = 0                    #TESTE para vida do mago1 não aparecer negativa
+            continue                                         
         print("-"*55)
         time.sleep(3)
 
         mago1.atacar(guerreiro1) 
-        if guerreiro1.vida <=0:                #TESTE para vida do guerreiro não ficar negativa
-            guerreiro1.vida = 0
-            continue                #TESTE para vida do guerreiro não ficar negativa
+        if guerreiro1.vida <=0:                #TESTE para vida do guerreiro não aparecer negativa
+            guerreiro1.vida = 0                #TESTE para vida do guerreiro não aparecer negativa
+            continue                
         guerreiro1.curar()
         print("-"*55)
         time.sleep(3)
